@@ -1,0 +1,118 @@
+QUESTION 1
+Sử dụng lại DB Testing System với các bảng dữ liệu, ràng buộc và kiểu dữ liệu như dưới.
+Hãy chuyển sang các Object Java và tối ưu lại các thuộc tính.
+
+        TABLE 1: DEPARTMENT
+
+        DepartmentID: Định danh của phòng ban (auto increment)
+
+        DepartmentName: Tên đầy đủ của phòng ban (VD: Sale, Marketing, …)
+
+        TABLE 2: POSITION
+
+        PositionID: Định danh của chức vụ (auto increment)
+
+        PositionName: Tên chức vụ (Dev, Test, Scrum Master, PM)
+
+        TABLE 3: ACCOUNT
+
+        AccountID: Định danh của User (auto increment)
+
+        Email
+
+        Username
+
+        FullName
+
+        DepartmentID: Phòng ban của user trong hệ thống
+
+        PositionID: Chức vụ của user
+
+        CreateDate: Ngày tạo tài khoản
+
+        TABLE 4: GROUP
+
+        GroupID: Định danh của nhóm (auto increment)
+
+        GroupName: Tên nhóm
+
+        CreatorID: ID của người tạo group
+
+        CreateDate: Ngày tạo group
+
+        TABLE 5: GROUP_ACCOUNT
+
+        GroupID: Định danh của nhóm
+
+        AccountID: Định danh của user
+
+        JoinDate: Ngày user tham gia nhóm
+
+        TABLE 6: TYPE_QUESTION
+
+        TypeID: Định danh của loại câu hỏi (auto increment)
+
+        TypeName: Tên loại câu hỏi (Essay, Multiple-Choice)
+
+        TABLE 7: CATEGORY_QUESTION
+
+        CategoryID: Định danh của chủ đề câu hỏi (auto increment)
+
+        CategoryName: Tên chủ đề (Java, .NET, SQL, Postman, Ruby, …)
+
+        TABLE 8: QUESTION
+
+        QuestionID: Định danh của câu hỏi (auto increment)
+
+        Content: Nội dung câu hỏi
+
+        CategoryID: Định danh chủ đề câu hỏi
+
+        TypeID: Định danh loại câu hỏi
+
+        CreatorID: ID người tạo câu hỏi
+
+        CreateDate: Ngày tạo câu hỏi
+
+        TABLE 9: ANSWER
+
+        AnswerID: Định danh của câu trả lời (auto increment)
+
+        Content: Nội dung câu trả lời
+
+        QuestionID: Định danh câu hỏi
+
+        IsCorrect: Câu trả lời đúng hay sai
+
+        TABLE 10: EXAM
+
+        ExamID: Định danh của đề thi (auto increment)
+
+        Code: Mã đề thi
+
+        Title: Tiêu đề đề thi
+
+        CategoryID: Định danh chủ đề thi
+
+        Duration: Thời gian thi
+
+        CreatorID: ID người tạo đề thi
+
+        CreateDate: Ngày tạo đề thi
+
+        TABLE 11: EXAM_QUESTION
+
+        ExamID: Định danh của đề thi
+
+        QuestionID: Định danh của câu hỏi
+
+==================================================
+
+QUESTION 2
+Tạo file Program.java có chứa hàm main().
+Khởi tạo ít nhất 3 đối tượng cho mỗi table ở trên.
+
+==================================================
+
+QUESTION 3
+Trong file Program.java, in ra ít nhất 1 giá trị của mỗi đối tượng.
