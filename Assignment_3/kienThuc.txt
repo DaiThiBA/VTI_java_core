@@ -1,0 +1,59 @@
+Câu 2: Hàm String.format
+
+Thành phần	Ý nghĩa
+%	bắt đầu format
+0	nếu thiếu thì thêm số 0
+5	tổng độ dài là 5 ký tự
+d	số nguyên (decimal)
+
+cách viết: công thức % [padding] [width] [type]
+
+Câu 4: Regex
+"\\s+" -> có 1 hoặc nhiều khoảng trắng
+
+4️⃣ Mốc đầu / cuối chuỗi
+Regex	Ý nghĩa
+^	bắt đầu chuỗi
+$	kết thúc chuỗi
+
+Regex	Ý nghĩa
+.	1 ký tự bất kỳ
+\d	1 chữ số (0–9)
+\D	không phải chữ số
+\w	chữ + số + _
+\W	không phải \w
+\s	khoảng trắng (space, tab, newline)
+\S	không phải khoảng trắng
+
+3️⃣ Số lần lặp (RẤT hay dùng)
+Regex	Nghĩa
+*	0 hoặc nhiều
++	1 hoặc nhiều ⭐
+?	0 hoặc 1
+{n}	đúng n lần
+{n,}	≥ n lần
+{n,m}	từ n đến m lần
+
+Câu 4_3:
+
+String.join(" ", arrString));-> Nối chuỗi với delimiter
+subString() cắt chuỗi
+Java không có capitalise, nếu muốn viết hoa chữ cái đầu thì
+------------------------------------
+    String phanConLai = arrString[i].substring(1);
+                    arrString[i] = Character.toUpperCase(kiTuDau)
+                            + phanConLai;
+------------------------------------
+question_4_4()
+thay thế tất cả chuỗi  -> replaceAll(regexMuonThay,thay thế)
+
+---
+question_4_8()
+tìm kiếm có chứa -> contains()
+
+---
+StringBuilder.reverse() -> reverse chuỗi
+
+question_4_13
+.* → bất kỳ ký tự nào trước/sau
+\d -> có 1 digit
