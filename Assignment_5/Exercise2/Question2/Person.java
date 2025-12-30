@@ -1,0 +1,80 @@
+package Assignment_5.Exercise2.Question2;
+
+import java.util.Scanner;
+
+public class Person {
+    protected String name;
+    protected String gender;
+    protected String birthDate;
+    protected String address;
+
+    // Constructor không tham số
+    public Person() {
+    }
+
+    // Constructor đầy đủ
+    public Person(String name, String gender, String birthDate, String address) {
+        this.name = name;
+        this.gender = gender;
+        this.birthDate = birthDate;
+        this.address = address;
+    }
+
+    // Getter & Setter
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public String getBirthDate() {
+        return birthDate;
+    }
+
+    public void setBirthDate(String birthDate) {
+        this.birthDate = birthDate;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    // a) inputInfo
+    public void inputInfo() {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Nhập tên: ");
+        name = sc.nextLine();
+
+        System.out.print("Nhập giới tính: ");
+        gender = sc.nextLine();
+
+        System.out.print("Nhập ngày sinh: ");
+        birthDate = sc.nextLine();
+
+        System.out.print("Nhập địa chỉ: ");
+        address = sc.nextLine();
+    }
+
+    // b) showInfo
+    public void showInfo() {
+        System.out.println("Tên: " + name);
+        System.out.println("Giới tính: " + gender);
+        System.out.println("Ngày sinh: " + birthDate);
+        System.out.println("Địa chỉ: " + address);
+    }
+}

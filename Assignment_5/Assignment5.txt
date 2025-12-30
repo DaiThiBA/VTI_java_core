@@ -1,0 +1,83 @@
+Exercise 1: Abstraction
+Question 1: Interface
+Tạo một interface có tên INews bao gồm method void Display(), float Calculate().
+Tạo một class News bao gồm thuộc tính:
+      ID (int), Title (String), PublishDate (String), Author (String),
+      Content (String) và AverageRate (float).
+Tạo các setter và getter cho từng thuộc tính, riêng AverageRate thì chỉ có getter.
+Implement các method trong interface INews như sau:
+      a) Method Display() sẽ in ra Title, PublishDate, Author,Content và AverageRate của tin tức ra console.
+     b) Method có tên Calculate() để thiết đặt thuộc tính
+         Khai báo một array có tên Rates kiểu int gồm 3 phần tử AverageRate là trung bình cộng của 3 phần tử của array Rates.
+    c) Tạo chương trình demo có tên là MyNews và tạo một menu lựa chọn gồm các mục sau:
+                 • Insert news
+                 • View list news
+                 • Average rate
+                 • Exit
+Nếu người dùng chọn 1 từ bàn phím thì tạo một object của class News và nhập giá trị cho các thuộc tính Title, PublishDate, Author, Content sau đó yêu cầu người dùng nhập vào 3 đánh giá để lưu vào Rates.
+Nếu người dùng chọn 2 từ bàn phím thì thực thi method Display().
+Nếu người dùng chọn 3 từ bàn phím thì thực hiện method Calculate() để tính đánh giá trung bình, sau đó thực thi method Display().
+Trường hợp người dùng chọn 4 thì sẽ thoát khỏi chương trình.
+
+Question 2:
+Các thí sinh dự thi đại học bao gồm các thí sinh thi khối A, B, và khối C. Các thí sinh cần quản lý các thông tin sau: Số báo danh, họ tên, địa chỉ, mức ưu tiên.
+       Thí sinh thi khối A thi các môn: Toán, Lý, Hoá.
+Thí sinh thi khối B thi các môn: Toán, Hoá, Sinh.
+Thí sinh thi khối C thi các môn: Văn, Sử, Địa.
+
+     a) Xây dựng các class để quản lý các thi sinh dự thi đại học.
+     b) Xây dựng interface ITuyenSinh và class TuyenSinh có các chức năng:
+            a. Thêm mới thí sinh.
+            b. Hiện thị thông tin của thí sinh và khối thi của thí sinh.
+            c. Tìm kiếm theo số báo danh.
+            d. Thoát khỏi chương trình.
+
+Exercise 2: Polymorphism
+Question 1: Interface Management
+Tạo 1 class Student gồm các property id, name, group(int)
+Tạo 1 interface IStudent bao gồm các method : điểmDanh(), họcBài(), đi dọn vệ sinh()
+Class Student sẽ implement interface như sau:
+
+        Method điểm danh() sẽ in ra nội dung như sau:
+              "Nguyễn Văn A điểm danh"
+              "Nguyễn Văn B điểm danh"
+              "Nguyễn Văn C điểm danh"
+              ….
+       Method học Bài () sẽ in ra nội dung như sau:
+             "Nguyễn Văn A đang học bài"
+             "Nguyễn Văn B đang học bài "
+             "Nguyễn Văn C đang học bài "
+              …
+       Tương tự với các method còn lại
+   Hãy viết chương trình thực hiện các lệnh sau:
+           a) Tạo 10 học sinh, chia thành 3 nhóm
+           b) Kêu gọi cả lớp điểm danh.
+           c) Gọi nhóm 1 đi học bài
+           d) Gọi nhóm 2 đi dọn vệ sinh
+
+
+Question 2: Abstract Management
+Tạo 1 class Person chứa các property sau: tên, giới tính, ngày sinh, địa chỉ với đầy đủ getter setter, constructor không tham số, constructor đầy đủ tham số
+     a) Viết phương thức inputInfo(), nhập thông tin Person từ bàn phím
+     b) Viết phương thức showInfo(), hiển thị tất cả thông tin Person
+Tạo class Student thừa kế Person, lưu trữ các thông tin một sinh viên:
+Mã sinh viên, Điểm trung bình, Email
+        a) Override phương thức inputInfo(), nhập thông tin Student từ bàn phím
+        b) Override phương thức showInfo(), hiển thị tất cả thông tin Student
+        c) Viết phương thức xét xem Student có được học bổng không?
+            Điểm trung bình từ 8.0 trở lên là được học bổng.
+
+Question 3: This & Super, Overriding
+     Tạo 1 class HinhChuNhat có 2 method: tính chu vi và tính diện tích.
+     Hãy implement 2 method này.
+     Tiếp theo hãy tạo 1 class HinhVuong extends HinhChuNhat, có 2 method tính chu vi và tính diện tích.
+   Chú ý:
+      Không implement method trong class HinhVuong theo công thức tính diện tích, chu vi hình vuông mà sẽ gọi theo HinhChuNhat.tinhChuVi(), HinhChuNhat.tinhDienTich() )
+Và trong mỗi method print thêm dòng "Tính diện tích/ chu vi theo Hình Vuông/ Hình Chữ Nhật"
+
+Question 4:
+Tạo 1 class MyMath có method sum có 2 parameter (có thể là int, có thể là byte, có thể là float), sau đó trả về tổng của 2 số đó. Hãy viết chương trình demo.
+
+Question 5 :
+Điện thoại di động được chia thành 2 loại: điện thoại cổ điển và điện thoại thông minh. Cả 2 loại điện thoại này đều có 4 chức năng cơ bản: nghe và gọi điện thoại, gửi và nhận tin nhắn văn bản. Riêng điện thoại thông minh thì có thêm các chức năng: sử dụng 3G, chụp hình. Điện thoại cổ điển có sẵn chức năng nghe đài radio (điện thoại thông minh không có sẵn chức năng này). Cả điện thoại cổ điển và điện thoại thông minh đều có thể sử dụng làm vũ khí (trong tình huống người dùng cần sử dụng để tấn công kẻ xấu).
+Hãy thiết kế các class, interface, method
